@@ -1,0 +1,29 @@
+<!-- Add Several New Elements with append() and prepend()
+	: 새로운 요소 여러 개 추가
+
+append() 및 prepend() 메소드 모두 무한한 수의 새로운 요소를 매개 변수로 사용할 수 있다
+새로운 요소는 text/HTML, jQuery, and JavaScript code, DOM 요소로 생성 할 수 있다
+요소는 text / HTML, jQuery 및 JavaScript / DOM으로 작성되고 prepend()도 동일하다 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+function appendText() {
+  var txt1 = "<p>Text1.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text2.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text3.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+}
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- attr()에는 콜백 함수도 제공된다
+콜백 함수에는 선택된 요소 목록의 현재 요소 색인과 원래 속성 값의 두 가지 매개 변수가 있다
+그런 다음 함수에서 새 속성 값으로 사용할 문자열을 반환한다 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", function(i, origValue){
+      return origValue + "/jquery/"; 
+    });
+  }); 
+});
+
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button>Change href Value</button>
+
+<p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- DOM 조작을 위한 유용한 세 가지 jQuery Method
+
+- text() : 선택된 요소의 텍스트 내용을 설정하거나 반환
+- html() : 선택한 요소의 내용을 설정하거나 반환 (HTML 마크업 포함)
+- val() : 양식 필드의 값을 설정하거나 반환 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Value: " + $("#test").val());
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+
+<button>Show Value</button>
+
+</body>
+</html>

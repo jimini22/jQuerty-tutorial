@@ -1,0 +1,26 @@
+<!-- Callback Functions
+	A callback function is executed after the current effect is 100% finished. -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide("slow", function(){			//function() ~ 부분이 콜백
+      alert("The paragraph is now hidden");	//$(selector).hide(speed,callback);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>
